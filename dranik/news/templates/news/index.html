@@ -33,7 +33,15 @@
     <div class="card mt-2">
       <div class="card-header">Категория: {{i.category}}</div>
       <div class="card-body">
+
+
+
         <h5 class="card-title">{{i.title}}</h5>
+                <div class="media">
+          {% if i.photo %}
+            <img src="{{i.photo.url}}" width="350" class="mr-3">
+          {% endif %}
+        </div>
         <p class="card-text">{{i.content}}</p>
         <a href="#" class="btn btn-primary">Читать...</a>
       </div>
