@@ -17,8 +17,9 @@ def index(request):
 
 def get_category(request, category_id):
     news = News.objects.filter(category_id=category_id)
-    categories = Category.objects.all()
     category = Category.objects.get(pk=category_id)
+    categories = Category.objects.all()
+
     context = {
         'news': news,
         'categories': categories,
